@@ -1,6 +1,6 @@
 package com.vm.training.java.codingtest;
 
-public class Employee {
+public class Employee { 
 
 	private String firstName;
 	private String lastName;

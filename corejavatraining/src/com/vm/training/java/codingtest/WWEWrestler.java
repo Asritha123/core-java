@@ -1,17 +1,16 @@
 package com.vm.training.java.codingtest;
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-
 public class WWEWrestler
 {
 public static void main(String[] args) {
 			// TODO Auto-generated method stub
+	
 			ArrayList<WWE> arraylist=new ArrayList<WWE>();
 			
 		     arraylist.add(new WWE("Sakshi","Malik",296));
@@ -32,23 +31,13 @@ public static void main(String[] args) {
 				 printFirstName(arraylist).forEach(s->System.out.println(s));
 				 System.out.println("wrestlers sorted by firstname :");
 				 sortbyFirstName(arraylist).forEach(s->System.out.println(s.getFirstName()));
-				 private static List<String> printFirstName(List <WWE> list)
-					{
-						 return list.stream().map(p->p.getFirstName()).collect(Collectors.toList());
-						
-					}
-					private static List<WWE> sortbyFirstName(List <WWE> list)
-					{
-						 return list.stream().sorted(Comparator.comparing(WWE::getFirstName)).collect(Collectors.toList());
-					}
-
-
-					
-
-		        	
-		        
-			   
-
+}
+private static List<String> printFirstName(List <WWE> list) {
+						  return list.stream().map(s->s.getFirstName()).collect(Collectors.toList());
+					  
+					  } private static List<WWE> sortbyFirstName(List <WWE> list)
+					  { 
+						  return list.stream().sorted(Comparator.comparing(WWE::getFirstName)).collect(Collectors.toList()); }
 	}
 
-}
+
